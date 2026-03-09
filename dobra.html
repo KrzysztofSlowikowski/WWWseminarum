@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- ✅ DOBRZE: Język strony dla czytników i SEO -->
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <!-- ✅ DOBRZE: Widoczny obszar dla responsywności -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ✅ DOBRZE: Unikalny i opisowy tytuł -->
+    <title>Przykładowy blog o kotach - wzór dostępności</title>
+    <!-- ✅ DOBRZE: Meta description (ważne dla SEO) -->
+    <meta name="description" content="Przykładowy wpis na blogu prezentujący dobre praktyki kodowania HTML.">
+    <style>
+        /* Styl jest taki sam jak w złej wersji, 
+           ale może być w osobnym pliku .css dla wydajności */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        /* Używamy klas, ale struktura HTML jest semantyczna */
+        .header-style { font-size: 32px; font-weight: bold; background: yellow; padding: 20px; text-align: center; }
+        .menu-style { background: black; color: white; padding: 15px; text-align: center; }
+        .menu-style a { color: white; margin: 10px; }
+        .content-style { margin: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .card { border: 1px solid black; padding: 20px; margin: 10px; }
+        .footer-style { background: lightgray; padding: 15px; text-align: center; }
+        img { width: 100%; height: auto; display: block; } 
+        /* ✅ DOBRZE: display:block zapobiega dziwnym marginesom */
+    </style>
+</head>
+<body>
+    <!-- ✅ DOBRZE: Znacznik <header> zamiast div -->
+    <header>
+        <div class="header-style">🐱 Mój blog o kotach</div>
+    </header>
+
+    <!-- ✅ DOBRZE: Znacznik <nav> dla menu nawigacyjnego -->
+    <nav class="menu-style">
+        <a href="#">Start</a> |
+        <a href="#">Galeria</a> |
+        <a href="#">Kontakt</a>
+    </nav>
+
+    <!-- ✅ DOBRZE: Główna treść w <main> -->
+    <main class="content-style">
+        <!-- ✅ DOBRZE: Poprawna hierarchia nagłówków -->
+        <h1>Wszystko o rasach kotów</h1>
+        <p>To jest mój super blog o kotach. Koty są fajne. Lorem ipsum dolor sit amet.</p>
+        
+        <!-- ✅ DOBRZE: Obrazek z atrybutem alt oraz WIDTH/HEIGHT (zapobiega CLS!) -->
+        <!-- Ustawiamy atrybuty width/height, mimo że CSS je nadpisuje - przeglądarka rezerwuje miejsce -->
+        <img src="https://placekitten.com/1200/600" 
+             alt="Zdjęcie przedstawiające dwa małe, szare kocięta bawiące się kłębkiem wełny."
+             width="1200"
+             height="600"
+             loading="lazy"> <!-- ✅ DOBRZE: Lazy loading - ładuje się dopiero gdy użytkownik przewinie -->
+        
+        <h2>Kot Perski</h2>
+        <p>Opis kota perskiego. Taki puszysty.</p>
+        <!-- ✅ DOBRZE: Dobry kontrast (ciemnoszary na białym) -->
+        <span style="color: #333333;">Autor: Jan Kot</span>
+        
+        <article class="card"> <!-- ✅ DOBRZE: <article> dla samodzielnej treści -->
+            <h2>Kot Syjamski</h2> <!-- ✅ Nagłówek H2 dla sekcji -->
+            <p>Opis kota syjamskiego.</p>
+        </article>
+        
+        <article class="card">
+            <h2>Kot Maine Coon</h2>
+            <p>Opis kota maine coon.</p>
+        </article>
+        
+        <!-- ✅ DOBRZE: Opisowy link (kontekst) -->
+        <p><a href="#">Zobacz więcej artykułów o rasach kotów →</a></p>
+    </main>
+
+    <!-- ✅ DOBRZE: Stopka w <footer> -->
+    <footer class="footer-style">
+        <p>© 2023 Mój blog. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>

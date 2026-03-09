@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ❌ BRAKUJE: atrybutu lang, meta description, tytuł jest byle jaki -->
+    <title>Strona</title>
+    <!-- ❌ ZLE: Wbudowany ogromny styl, który spowalnia wszystko -->
+    <style>
+        .header { font-size: 32px; font-weight: bold; background: yellow; padding: 20px; text-align: center; }
+        .menu { background: black; color: white; padding: 15px; text-align: center; }
+        .menu a { color: white; margin: 10px; }
+        .content { margin: 20px; }
+        .box1, .box2, .box3 { border: 1px solid black; padding: 20px; margin: 10px; }
+        .footer { background: lightgray; padding: 15px; text-align: center; }
+        img { width: 100%; } /* ❌ ZLE: Brak ustalonych wymiarów - spowoduje skakanie layoutu (CLS)! */
+    </style>
+</head>
+<body>
+    <!-- ❌ ZLE: Wszystko w divach, zero semantyki -->
+    <div class="header">🐱 Mój blog o kotach</div>
+    
+    <div class="menu">
+        <a href="#">Start</a> | <a href="#">Galeria</a> | <a href="#">Kontakt</a>
+    </div>
+
+    <div class="content">
+        <!-- ❌ ZLE: Nagłówki w złej kolejności (H3 przed H1/H2) -->
+        <h3>Wstęp</h3>
+        <p>To jest mój super blog o kotach. Koty są fajne. Lorem ipsum dolor sit amet.</p>
+        
+        <!-- ❌ ZLE: Obrazek bez alt (niewidomy użytkownik nie wie co to), brak width/height (spowoduje CLS) -->
+        <img src="https://placekitten.com/1200/600" />
+        
+        <h3>Kot Perski</h3>
+        <p>Opis kota perskiego. Taki puszysty.</p>
+        <!-- ❌ ZLE: Mały kontrast? Szary na białym? -->
+        <span style="color: #cccccc;">Autor: Jan Kot</span>
+        
+        <div class="box1">
+            <h3>Kot Syjamski</h3>
+            <p>Opis kota syjamskiego.</p>
+        </div>
+        <div class="box2">
+            <h3>Kot Maine Coon</h3>
+            <p>Opis kota maine coon.</p>
+        </div>
+        <div class="box3">
+            <!-- ❌ ZLE: Link "więcej" - nie mówi nic czytnikowi ekranu -->
+            <a href="#">Kliknij tutaj</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2023 Mój blog. Wszelkie prawa zastrzeżone.
+    </div>
+</body>
+</html>
