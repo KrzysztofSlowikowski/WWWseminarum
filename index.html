@@ -3,75 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prezentacja: Wydajność, SEO, Dostępność</title>
+    <title>🍄 Krasnalowy test Lighthouse 🍄</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: #e8f5e9;
+            background-image: radial-gradient(circle at 10px 10px, #a5d6a7 2px, transparent 2px), 
+                              radial-gradient(circle at 30px 30px, #81c784 2px, transparent 2px);
+            background-size: 50px 50px, 80px 80px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
+            padding: 20px;
         }
+        
         .container {
-            background: rgba(255,255,255,0.1);
+            background: #fff3e0;
             padding: 3rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border-radius: 60px 20px 60px 20px;
+            border: 6px dashed #bf360c;
+            box-shadow: 15px 15px 0 #6d4c41, 0 10px 20px rgba(0,0,0,0.2);
+            max-width: 800px;
+            width: 100%;
+            position: relative;
         }
+        
+        /* Grzybki w rogach */
+        .container::before {
+            content: "🍄";
+            font-size: 4rem;
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            transform: rotate(-15deg);
+            filter: drop-shadow(5px 5px 0 #8d6e63);
+        }
+        
+        .container::after {
+            content: "🍄";
+            font-size: 4rem;
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            transform: rotate(20deg);
+            filter: drop-shadow(5px 5px 0 #8d6e63);
+        }
+        
         h1 {
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
+            color: #1b5e20;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-shadow: 4px 4px 0 #a5d6a7, 6px 6px 0 #2e7d32;
+            border-bottom: 3px dotted #bf360c;
+            padding-bottom: 20px;
+            word-wrap: break-word;
         }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #3e2723;
+            background: #ffe0b2;
+            padding: 15px;
+            border-radius: 40px 10px 40px 10px;
+            border: 3px solid #8d6e63;
+            margin-bottom: 30px;
+        }
+        
         .buttons {
             display: flex;
-            gap: 2rem;
+            gap: 30px;
             justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
         }
+        
         .btn {
-            padding: 1rem 2.5rem;
-            font-size: 1.3rem;
+            padding: 1.2rem 2.8rem;
+            font-size: 1.5rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 30px 10px 30px 10px;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.2s;
             text-decoration: none;
             display: inline-block;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 3px solid #2d4a1e;
         }
+        
         .btn-danger {
-            background: #ff4757;
+            background: #d32f2f;
             color: white;
-            box-shadow: 0 5px 15px rgba(255,71,87,0.4);
+            box-shadow: 8px 8px 0 #8d6e63, 0 5px 15px rgba(0,0,0,0.3);
         }
+        
         .btn-success {
-            background: #00b894;
+            background: #2e7d32;
             color: white;
-            box-shadow: 0 5px 15px rgba(0,184,148,0.4);
+            box-shadow: 8px 8px 0 #8d6e63, 0 5px 15px rgba(0,0,0,0.3);
         }
+        
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transform: translate(-5px, -5px);
+            box-shadow: 13px 13px 0 #5d4037, 0 10px 25px rgba(0,0,0,0.3);
         }
+        
+        .btn:active {
+            transform: translate(5px, 5px);
+            box-shadow: 3px 3px 0 #5d4037;
+        }
+        
         .note {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            opacity: 0.8;
+            background: #8d6e63;
+            color: #fff3e0;
+            padding: 15px 25px;
+            border-radius: 50px 10px 50px 10px;
+            font-size: 1.1rem;
+            text-align: center;
+            border: 3px solid #ffb74d;
+            margin-top: 30px;
         }
+        
+        .note strong {
+            color: #ffb74d;
+            font-size: 1.3rem;
+        }
+        
+        .grzybkowe-ozdoby {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+        
+        /* Małe grzybki w tle */
+        .floating-mushroom {
+            position: fixed;
+            font-size: 2rem;
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .m1 { top: 10%; left: 5%; transform: rotate(-10deg); }
+        .m2 { bottom: 15%; right: 3%; transform: rotate(25deg); }
+        .m3 { top: 20%; right: 8%; transform: rotate(-30deg); }
+        .m4 { bottom: 25%; left: 7%; transform: rotate(15deg); }
     </style>
 </head>
 <body>
+    <!-- Pływające grzybki w tle -->
+    <div class="floating-mushroom m1">🍄</div>
+    <div class="floating-mushroom m2">🍄</div>
+    <div class="floating-mushroom m3">🍄</div>
+    <div class="floating-mushroom m4">🍄</div>
+
     <div class="container">
-        <h1>🌐 Seminarium: Wydajność, SEO, Dostępność</h1>
-        <p>Wybierz wersję strony do analizy:</p>
-        <div class="buttons">
-            <a href="zla.html" class="btn btn-danger">🔴 Strona Zła (Antywzorzec)</a>
-            <a href="dobra.html" class="btn btn-success">🟢 Strona Dobra (Wzór)</a>
+        <div class="grzybkowe-ozdoby">
+            <span>🍄</span> <span>🍄</span> <span>🍄</span>
         </div>
-        <p class="note">Uruchom narzędzie Lighthouse (F12 -> Lighthouse) na obu wersjach i porównaj wyniki!</p>
+        
+        <h1>🌐 KRASNALOWY TEST LIGHTHOUSE 🌐</h1>
+        
+        <div class="subtitle">
+            <strong>🍄 Grzybki i krasnale testują dostępność! 🍄</strong>
+        </div>
+        
+        <p style="text-align: center; font-size: 1.2rem; color: #2d4a1e;">
+            Dwie strony, ten sam wygląd, ale zupełnie inny kod!<br>
+            <em>(zgadnij która dostanie 100 w Lighthouse)</em>
+        </p>
+        
+        <div class="buttons">
+            <a href="zla.html" class="btn btn-danger">🍄 STRONA ZŁA</a>
+            <a href="dobra.html" class="btn btn-success">🍄 STRONA DOBRA</a>
+        </div>
+        
+        <div class="note">
+            <strong>🍄 INSTRUKCJA DLA KRASNALA:</strong><br><br>
+            1. Kliknij w któryś guzik<br>
+            2. Wciśnij <strong>F12</strong> i znajdź zakładkę <strong>Lighthouse</strong><br>
+            3. Kliknij <strong>"Analyze page load"</strong><br>
+            4. Porównaj wyniki!<br>
+            <br>
+            <span style="font-size: 2rem;">👇👇👇</span>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #6d4c41; font-size: 1.1rem;">
+            <p>🟤 Zobaczysz dwie strony które wyglądają identycznie<br>
+            ⚫ Ale Lighthouse pokaże prawdę o ich kodzie!</p>
+            
+            <div style="display: flex; justify-content: center; gap: 40px; margin-top: 20px;">
+                <div style="text-align: center;">
+                    <div style="background: #d32f2f; color: white; padding: 10px; border-radius: 20px 5px 20px 5px;">🔴 ZŁA</div>
+                    <small>bez litości dla kodu</small>
+                </div>
+                <div style="text-align: center;">
+                    <div style="background: #2e7d32; color: white; padding: 10px; border-radius: 20px 5px 20px 5px;">🟢 DOBRA</div>
+                    <small>wzór do naśladowania</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grzybkowe-ozdoby" style="margin-top: 30px;">
+            <span>🍄</span> <span>🍄</span> <span>🍄</span>
+        </div>
     </div>
 </body>
 </html>
