@@ -1,79 +1,169 @@
 <!DOCTYPE html>
-<!-- ✅ DOBRZE: Język strony dla czytników i SEO -->
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <!-- ✅ DOBRZE: Widoczny obszar dla responsywności -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ✅ DOBRZE: Unikalny i opisowy tytuł -->
-    <title>Przykładowy blog o kotach - wzór dostępności</title>
-    <!-- ✅ DOBRZE: Meta description (ważne dla SEO) -->
-    <meta name="description" content="Przykładowy wpis na blogu prezentujący dobre praktyki kodowania HTML.">
+    <title>Kot domowy – Wikipedia, wolna encyklopedia</title>
+    <meta name="description" content="Kot domowy - udomowiony gatunek ssaka z rzędu drapieżnych z rodziny kotowatych. Artykuł zawiera opis, historię i ciekawostki.">
+    
     <style>
-        /* Styl jest taki sam jak w złej wersji, 
-           ale może być w osobnym pliku .css dla wydajności */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        /* Używamy klas, ale struktura HTML jest semantyczna */
-        .header-style { font-size: 32px; font-weight: bold; background: yellow; padding: 20px; text-align: center; }
-        .menu-style { background: black; color: white; padding: 15px; text-align: center; }
-        .menu-style a { color: white; margin: 10px; }
-        .content-style { margin: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
-        .card { border: 1px solid black; padding: 20px; margin: 10px; }
-        .footer-style { background: lightgray; padding: 15px; text-align: center; }
-        img { width: 100%; height: auto; display: block; } 
-        /* ✅ DOBRZE: display:block zapobiega dziwnym marginesom */
+        /* Styl w stylu Wikipedii */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        header {
+            background: white;
+            padding: 20px;
+            border-bottom: 1px solid #a2a9b1;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 10px;
+        }
+        
+        main {
+            display: flex;
+            gap: 30px;
+        }
+        
+        article {
+            flex: 3;
+            background: white;
+            padding: 20px;
+            border: 1px solid #a2a9b1;
+            border-radius: 4px;
+        }
+        
+        aside {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 15px;
+            border: 1px solid #a2a9b1;
+            border-radius: 4px;
+            height: fit-content;
+        }
+        
+        .image-card {
+            margin-bottom: 25px;
+            background: white;
+            padding: 10px;
+            border: 1px solid #c8ccd1;
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-card figcaption {
+            padding: 10px;
+            font-size: 0.9em;
+            color: #555;
+            background: #f8f9fa;
+        }
+        
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #a2a9b1;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        h2 {
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 5px;
+        }
+        
+        a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Focus dla dostępności */
+        a:focus, button:focus {
+            outline: 3px solid #4D90FE;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body>
-    <!-- ✅ DOBRZE: Znacznik <header> zamiast div -->
     <header>
-        <div class="header-style">🐱 Mój blog o kotach</div>
+        <h1>Kot domowy</h1>
+        <p>Z Wikipedii, wolnej encyklopedii</p>
     </header>
 
-    <!-- ✅ DOBRZE: Znacznik <nav> dla menu nawigacyjnego -->
-    <nav class="menu-style">
-        <a href="#">Start</a> |
-        <a href="#">Galeria</a> |
-        <a href="#">Kontakt</a>
-    </nav>
+    <main>
+        <!-- Główny artykuł -->
+        <article>
+            <h2>Opis</h2>
+            <p><strong>Kot domowy</strong> (<em>Felis catus</em>) – udomowiony gatunek ssaka z rzędu drapieżnych z rodziny kotowatych. Koty zostały udomowione około 9500 lat temu na Bliskim Wschodzie.</p>
+            
+            <h2>Historia</h2>
+            <p>Koty domowe pochodzą od kota nubijskiego. W starożytnym Egipcie były czczone i chronione. Zabicie kota groziło karą śmierci. Dziś są jednym z najpopularniejszych zwierząt domowych na świecie.</p>
+            
+            <h2>Charakterystyka</h2>
+            <p>Koty są zwierzętami terytorialnymi i drapieżnikami. Posiadają doskonały słuch i wzrok. Wąsy (wibrysy) pomagają im w orientacji w terenie. Potrafią spać do 16 godzin na dobę.</p>
+            
+            <p>Więcej informacji: <a href="#">Kot perski</a> • <a href="#">Kot syjamski</a> • <a href="#">Kot maine coon</a></p>
+        </article>
 
-    <!-- ✅ DOBRZE: Główna treść w <main> -->
-    <main class="content-style">
-        <!-- ✅ DOBRZE: Poprawna hierarchia nagłówków -->
-        <h1>Wszystko o rasach kotów</h1>
-        <p>To jest mój super blog o kotach. Koty są fajne. Lorem ipsum dolor sit amet.</p>
-        
-        <!-- ✅ DOBRZE: Obrazek z atrybutem alt oraz WIDTH/HEIGHT (zapobiega CLS!) -->
-        <!-- Ustawiamy atrybuty width/height, mimo że CSS je nadpisuje - przeglądarka rezerwuje miejsce -->
-        <img src="https://placekitten.com/1200/600" 
-             alt="Zdjęcie przedstawiające dwa małe, szare kocięta bawiące się kłębkiem wełny."
-             width="1200"
-             height="600"
-             loading="lazy"> <!-- ✅ DOBRZE: Lazy loading - ładuje się dopiero gdy użytkownik przewinie -->
-        
-        <h2>Kot Perski</h2>
-        <p>Opis kota perskiego. Taki puszysty.</p>
-        <!-- ✅ DOBRZE: Dobry kontrast (ciemnoszary na białym) -->
-        <span style="color: #333333;">Autor: Jan Kot</span>
-        
-        <article class="card"> <!-- ✅ DOBRZE: <article> dla samodzielnej treści -->
-            <h2>Kot Syjamski</h2> <!-- ✅ Nagłówek H2 dla sekcji -->
-            <p>Opis kota syjamskiego.</p>
-        </article>
-        
-        <article class="card">
-            <h2>Kot Maine Coon</h2>
-            <p>Opis kota maine coon.</p>
-        </article>
-        
-        <!-- ✅ DOBRZE: Opisowy link (kontekst) -->
-        <p><a href="#">Zobacz więcej artykułów o rasach kotów →</a></p>
+        <!-- Sekcja boczna z obrazkami -->
+        <aside>
+            <h2>Galeria</h2>
+            
+            <figure class="image-card">
+                <img src="https://placekitten.com/300/200" 
+                     alt="Rudy kot perski leżący na czerwonej poduszce"
+                     width="300" 
+                     height="200"
+                     loading="lazy">
+                <figcaption>
+                    <strong>Kot perski</strong> - rasa znana z długiej, puszystej sierści i spokojnego temperamentu.
+                </figcaption>
+            </figure>
+            
+            <figure class="image-card">
+                <img src="https://placekitten.com/301/200" 
+                     alt="Szary kot syjamski z niebieskimi oczami siedzący na parapecie"
+                     width="300" 
+                     height="200"
+                     loading="lazy">
+                <figcaption>
+                    <strong>Kot syjamski</strong> - charakterystyczne umaszczenie point i niebieskie oczy. Bardzo towarzyski.
+                </figcaption>
+            </figure>
+            
+            <h3>Ciekawostki</h3>
+            <ul>
+                <li>Koty spędzają 70% życia na spaniu</li>
+                <li>Ich serce bije dwa razy szybciej niż ludzkie</li>
+                <li>Mają 32 mięśnie w każdym uchu</li>
+            </ul>
+        </aside>
     </main>
 
-    <!-- ✅ DOBRZE: Stopka w <footer> -->
-    <footer class="footer-style">
-        <p>© 2023 Mój blog. Wszelkie prawa zastrzeżone.</p>
+    <footer>
+        <p>Tekst udostępniany na licencji Creative Commons. Strona wzorcowa do prezentacji o dostępności.</p>
+        <p><a href="#">Polityka prywatności</a> • <a href="#">O Wikipedii</a> • <a href="#">Kontakt</a></p>
     </footer>
 </body>
 </html>
