@@ -1,56 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- ❌ BRAKUJE: atrybutu lang, meta description, tytuł jest byle jaki -->
-    <title>Strona</title>
-    <!-- ❌ ZLE: Wbudowany ogromny styl, który spowalnia wszystko -->
+    <meta charset="UTF-8">
+    <title>Strona o kotach</title>
     <style>
-        .header { font-size: 32px; font-weight: bold; background: yellow; padding: 20px; text-align: center; }
-        .menu { background: black; color: white; padding: 15px; text-align: center; }
-        .menu a { color: white; margin: 10px; }
-        .content { margin: 20px; }
-        .box1, .box2, .box3 { border: 1px solid black; padding: 20px; margin: 10px; }
-        .footer { background: lightgray; padding: 15px; text-align: center; }
-        img { width: 100%; } /* ❌ ZLE: Brak ustalonych wymiarów - spowoduje skakanie layoutu (CLS)! */
+        /* TE SAME STYLE - wygląda identycznie */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        .header {
+            background: white;
+            padding: 20px;
+            border-bottom: 1px solid #a2a9b1;
+            margin-bottom: 20px;
+        }
+        
+        .h1 {
+            margin: 0;
+            font-size: 2em;
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .main {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .article {
+            flex: 3;
+            background: white;
+            padding: 20px;
+            border: 1px solid #a2a9b1;
+            border-radius: 4px;
+        }
+        
+        .aside {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 15px;
+            border: 1px solid #a2a9b1;
+            border-radius: 4px;
+        }
+        
+        .image-card {
+            margin-bottom: 25px;
+            background: white;
+            padding: 10px;
+            border: 1px solid #c8ccd1;
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-card .caption {
+            padding: 10px;
+            font-size: 0.9em;
+            color: #555;
+            background: #f8f9fa;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #a2a9b1;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .h2 {
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 5px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .link {
+            color: #0645ad;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <!-- ❌ ZLE: Wszystko w divach, zero semantyki -->
-    <div class="header">🐱 Mój blog o kotach</div>
+    <!-- ❌ BRAK lang="pl" -->
+    <!-- ❌ BRAK meta description -->
     
-    <div class="menu">
-        <a href="#">Start</a> | <a href="#">Galeria</a> | <a href="#">Kontakt</a>
+    <div class="header">
+        <div class="h1">Kot domowy</div>
+        <div>Z Wikipedii, wolnej encyklopedii</div>
     </div>
 
-    <div class="content">
-        <!-- ❌ ZLE: Nagłówki w złej kolejności (H3 przed H1/H2) -->
-        <h3>Wstęp</h3>
-        <p>To jest mój super blog o kotach. Koty są fajne. Lorem ipsum dolor sit amet.</p>
-        
-        <!-- ❌ ZLE: Obrazek bez alt (niewidomy użytkownik nie wie co to), brak width/height (spowoduje CLS) -->
-        <img src="https://placekitten.com/1200/600" />
-        
-        <h3>Kot Perski</h3>
-        <p>Opis kota perskiego. Taki puszysty.</p>
-        <!-- ❌ ZLE: Mały kontrast? Szary na białym? -->
-        <span style="color: #cccccc;">Autor: Jan Kot</span>
-        
-        <div class="box1">
-            <h3>Kot Syjamski</h3>
-            <p>Opis kota syjamskiego.</p>
+    <div class="main">
+        <!-- Główna treść -->
+        <div class="article">
+            <div class="h2">Opis</div>
+            <p><span class="bold">Kot domowy</span> (<span class="italic">Felis catus</span>) – udomowiony gatunek ssaka z rzędu drapieżnych z rodziny kotowatych. Koty zostały udomowione około 9500 lat temu na Bliskim Wschodzie.</p>
+            
+            <div class="h2">Historia</div>
+            <p>Koty domowe pochodzą od kota nubijskiego. W starożytnym Egipcie były czczone i chronione. Zabicie kota groziło karą śmierci. Dziś są jednym z najpopularniejszych zwierząt domowych na świecie.</p>
+            
+            <div class="h2">Charakterystyka</div>
+            <p>Koty są zwierzętami terytorialnymi i drapieżnikami. Posiadają doskonały słuch i wzrok. Wąsy (wibrysy) pomagają im w orientacji w terenie. Potrafią spać do 16 godzin na dobę.</p>
+            
+            <!-- ❌ Linki bez opisów -->
+            <p>Więcej informacji: <span class="link" onclick="alert('Przekierowanie do kota perskiego')">tutaj</span> • <span class="link" onclick="alert('Przekierowanie do kota syjamskiego')">tutaj</span> • <span class="link" onclick="alert('Przekierowanie do kota maine coon')">tutaj</span></p>
         </div>
-        <div class="box2">
-            <h3>Kot Maine Coon</h3>
-            <p>Opis kota maine coon.</p>
-        </div>
-        <div class="box3">
-            <!-- ❌ ZLE: Link "więcej" - nie mówi nic czytnikowi ekranu -->
-            <a href="#">Kliknij tutaj</a>
+
+        <!-- Sekcja boczna -->
+        <div class="aside">
+            <div class="h2">Galeria</div>
+            
+            <div class="image-card">
+                <!-- ❌ BRAK alt w obrazkach -->
+                <!-- ❌ BRAK width/height - będzie skakać -->
+                <img src="https://placekitten.com/300/200">
+                <div class="caption">
+                    <span class="bold">Kot perski</span> - rasa znana z długiej, puszystej sierści i spokojnego temperamentu.
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <img src="https://placekitten.com/301/200">
+                <div class="caption">
+                    <span class="bold">Kot syjamski</span> - charakterystyczne umaszczenie point i niebieskie oczy. Bardzo towarzyski.
+                </div>
+            </div>
+            
+            <div class="h3">Ciekawostki</div>
+            <!-- ❌ Lista zrobiona na divach -->
+            <div class="list">
+                <div class="list-item">• Koty spędzają 70% życia na spaniu</div>
+                <div class="list-item">• Ich serce bije dwa razy szybciej niż ludzkie</div>
+                <div class="list-item">• Mają 32 mięśnie w każdym uchu</div>
+            </div>
         </div>
     </div>
 
     <div class="footer">
-        © 2023 Mój blog. Wszelkie prawa zastrzeżone.
+        <div>Tekst udostępniany na licencji Creative Commons. Strona wzorcowa do prezentacji o dostępności.</div>
+        <!-- ❌ Linki bez href (nie działają z klawiaturą) -->
+        <div><span class="link" onclick="alert('Polityka')">Polityka prywatności</span> • <span class="link" onclick="alert('O nas')">O Wikipedii</span> • <span class="link" onclick="alert('Kontakt')">Kontakt</span></div>
     </div>
 </body>
 </html>
