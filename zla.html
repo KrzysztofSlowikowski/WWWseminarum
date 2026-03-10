@@ -2,162 +2,171 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Strona o kotach</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona o krasnalu</title>
+    
     <style>
-        /* TE SAME STYLE - wygląda identycznie */
+        /* Styl z grzybkowym motywem */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            line-height: 1.5;
+            color: #2d4a1e;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            background: #f8f9fa;
-        }
-        
-        .header {
-            background: white;
-            padding: 20px;
-            border-bottom: 1px solid #a2a9b1;
-            margin-bottom: 20px;
-        }
-        
-        .h1 {
-            margin: 0;
-            font-size: 2em;
-            border-bottom: 1px solid #a2a9b1;
-            padding-bottom: 10px;
-            font-weight: bold;
-        }
-        
-        .main {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .article {
-            flex: 3;
-            background: white;
-            padding: 20px;
-            border: 1px solid #a2a9b1;
-            border-radius: 4px;
-        }
-        
-        .aside {
-            flex: 1;
-            background: #f8f9fa;
-            padding: 15px;
-            border: 1px solid #a2a9b1;
-            border-radius: 4px;
-        }
-        
-        .image-card {
-            margin-bottom: 25px;
-            background: white;
             padding: 10px;
-            border: 1px solid #c8ccd1;
+            background: #e8f5e9;
         }
         
-        .image-card img {
+        header {
+            background: #a5d6a7;
+            padding: 15px;
+            border: 3px solid #2e7d32;
+            margin-bottom: 25px;
+            box-shadow: 5px 5px 0 #1b5e20;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #1b5e20;
+            text-shadow: 2px 2px 0 #81c784;
+        }
+        
+        main {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .tresc {
+            flex: 3;
+            background: #fff3e0;
+            padding: 15px;
+            border: 2px dashed #795548;
+        }
+        
+        .boczne-menu {
+            flex: 1;
+            background: #ffe0b2;
+            padding: 10px;
+            border: 4px dotted #bf360c;
+        }
+        
+        .karta-ze-zdjeciem {
+            margin-bottom: 20px;
+            background: #ffffff;
+            padding: 5px;
+            border: 2px solid #6d4c41;
+        }
+        
+        .karta-ze-zdjeciem img {
             width: 100%;
             height: auto;
-            display: block;
         }
         
-        .image-card .caption {
-            padding: 10px;
+        .podpis {
+            padding: 8px;
             font-size: 0.9em;
-            color: #555;
-            background: #f8f9fa;
+            color: #3e2723;
+            background: #ffe0b2;
+            font-style: italic;
         }
         
-        .footer {
+        .stopka {
             margin-top: 30px;
-            padding: 20px;
-            background: white;
-            border-top: 1px solid #a2a9b1;
+            padding: 15px;
+            background: #a5d6a7;
+            border: 3px solid #2e7d32;
             text-align: center;
-            font-size: 0.9em;
-            color: #666;
         }
         
-        .h2 {
-            border-bottom: 1px solid #a2a9b1;
-            padding-bottom: 5px;
-            font-size: 1.5em;
-            font-weight: bold;
+        h3 {
+            border-left: 5px solid #bf360c;
+            padding-left: 10px;
         }
         
-        .link {
-            color: #0645ad;
+        a {
+            color: #bf360c;
+        }
+        
+        .przycisk-grzybek {
+            background: #8d6e63;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
             text-decoration: none;
-            cursor: pointer;
         }
         
-        .link:hover {
-            text-decoration: underline;
+        /* Specjalny styl dla grzybkowych elementów */
+        .grzybkowe {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20"><circle cx="50" cy="40" r="30" fill="%23d32f2f"/><rect x="45" y="65" width="10" height="30" fill="%23f5f5f5"/><circle cx="30" cy="30" r="5" fill="white"/><circle cx="70" cy="30" r="5" fill="white"/></svg>');
+            background-repeat: repeat;
+            background-size: 30px 30px;
+            padding: 5px;
         }
     </style>
 </head>
 <body>
-    <!-- ❌ BRAK lang="pl" -->
-    <!-- ❌ BRAK meta description -->
-    
-    <div class="header">
-        <div class="h1">Kot domowy</div>
-        <div>Z Wikipedii, wolnej encyklopedii</div>
-    </div>
+    <header>
+        <h1>KRASNOLUDKI są wśród nas!</h1>
+        <div class="grzybkowe">🍄🍄🍄 GRZYBKI 🍄🍄🍄</div>
+    </header>
 
-    <div class="main">
-        <!-- Główna treść -->
-        <div class="article">
-            <div class="h2">Opis</div>
-            <p><span class="bold">Kot domowy</span> (<span class="italic">Felis catus</span>) – udomowiony gatunek ssaka z rzędu drapieżnych z rodziny kotowatych. Koty zostały udomowione około 9500 lat temu na Bliskim Wschodzie.</p>
+    <main>
+        <!-- Główna treść - celowo z błędami -->
+        <div class="tresc">
+            <h3>Jak wygląda krasnal?</h3>
+            <p><b>Krasnal</b> (<i>krasnoludek</i>) - to taki mały, ma brodę i czapkę. Często chowa się pod kamieniami i koleguje się z grzybkami.</p>
             
-            <div class="h2">Historia</div>
-            <p>Koty domowe pochodzą od kota nubijskiego. W starożytnym Egipcie były czczone i chronione. Zabicie kota groziło karą śmierci. Dziś są jednym z najpopularniejszych zwierząt domowych na świecie.</p>
+            <h3>Krótko o naturze</h3>
+            <p>Krasnale są wredne i złośliwe. Nie lubią jak się na nie patrzy. No chyba że to grzybek patrzy, to wtedy lubią.</p>
             
-            <div class="h2">Charakterystyka</div>
-            <p>Koty są zwierzętami terytorialnymi i drapieżnikami. Posiadają doskonały słuch i wzrok. Wąsy (wibrysy) pomagają im w orientacji w terenie. Potrafią spać do 16 godzin na dobę.</p>
+            <h3>A gdzie ten grzybek?</h3>
+            <p>Grzybek mieszka w swoim domku. Ma na imię Stefan. Często płacze, bo nikt nie chce się z nim bawić. Krasnal czasami przychodzi, ale tylko wtedy, gdy nie ma nic lepszego do roboty.</p>
             
-            <!-- ❌ Linki bez opisów -->
-            <p>Więcej informacji: <span class="link" onclick="alert('Przekierowanie do kota perskiego')">tutaj</span> • <span class="link" onclick="alert('Przekierowanie do kota syjamskiego')">tutaj</span> • <span class="link" onclick="alert('Przekierowanie do kota maine coon')">tutaj</span></p>
+            <p>Więcej informacji: <a href="#" class="przycisk-grzybek">Kliknij tutaj</a> • <a href="#" class="przycisk-grzybek">Kliknij tutaj też</a> • <a href="#" class="przycisk-grzybek">Albo tutaj</a></p>
+            
+            <img src="https://placekitten.com/600/300" style="width:100%; margin:20px 0;">
         </div>
 
-        <!-- Sekcja boczna -->
-        <div class="aside">
-            <div class="h2">Galeria</div>
+        <!-- Panel boczny - też z błędami -->
+        <div class="boczne-menu">
+            <h3>Zdjęcia</h3>
             
-            <div class="image-card">
-                <!-- ❌ BRAK alt w obrazkach -->
-                <!-- ❌ BRAK width/height - będzie skakać -->
-                <img src="https://placekitten.com/300/200">
-                <div class="caption">
-                    <span class="bold">Kot perski</span> - rasa znana z długiej, puszystej sierści i spokojnego temperamentu.
+            <div class="karta-ze-zdjeciem">
+                <img src="krasnal.png">
+                <div class="podpis">
+                    <b>To jest krasnal</b> - siedzi pod kamieniem. Myśli że jest niewidzialny.
                 </div>
             </div>
             
-            <div class="image-card">
-                <img src="https://placekitten.com/301/200">
-                <div class="caption">
-                    <span class="bold">Kot syjamski</span> - charakterystyczne umaszczenie point i niebieskie oczy. Bardzo towarzyski.
+            <div class="karta-ze-zdjeciem">
+                <img src="grzyb.png">
+                <div class="podpis">
+                    <b>Grzybek Stefan</b> - płacze bo nie ma kolegów.
                 </div>
             </div>
             
-            <div class="h3">Ciekawostki</div>
-            <!-- ❌ Lista zrobiona na divach -->
-            <div class="list">
-                <div class="list-item">• Koty spędzają 70% życia na spaniu</div>
-                <div class="list-item">• Ich serce bije dwa razy szybciej niż ludzkie</div>
-                <div class="list-item">• Mają 32 mięśnie w każdym uchu</div>
+            <h3>Lista rzeczy</h3>
+            <div>
+                • krasnal jest mały<br>
+                • grzybek też jest mały<br>
+                • gbur jest niedobry<br>
+                • wszyscy lubią grzybki
+            </div>
+            
+            <div style="margin-top:20px; padding:10px; background:#8d6e63; color:white; text-align:center;">
+                🍄 REKLAMA GRZYBKÓW 🍄<br>
+                <span style="font-size:10px;">grzybki są zdrowe</span>
             </div>
         </div>
+    </main>
+
+    <div class="stopka">
+        <p>To jest stopka - tutaj też jest tekst<br>
+        <a href="#">link 1</a> | <a href="#">link 2</a> | <a href="#">link 3</a></p>
     </div>
 
-    <div class="footer">
-        <div>Tekst udostępniany na licencji Creative Commons. Strona wzorcowa do prezentacji o dostępności.</div>
-        <!-- ❌ Linki bez href (nie działają z klawiaturą) -->
-        <div><span class="link" onclick="alert('Polityka')">Polityka prywatności</span> • <span class="link" onclick="alert('O nas')">O Wikipedii</span> • <span class="link" onclick="alert('Kontakt')">Kontakt</span></div>
-    </div>
+    <!-- Ukryty komentarz w kodzie - to nie wpływa na Lighthouse ale jest śmieszne -->
+    <!-- HAHA zapomniałem dodać lang="pl" i meta description, ale kogo to obchodzi -->
 </body>
 </html>
